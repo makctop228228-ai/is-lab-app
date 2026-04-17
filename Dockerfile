@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-COPY IsLabApp.csproj .
-RUN dotnet restore IsLabApp.csproj
 COPY . .
 RUN dotnet publish IsLabApp.csproj -c Release -o out
 
